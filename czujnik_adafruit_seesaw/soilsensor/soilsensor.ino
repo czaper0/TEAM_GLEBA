@@ -16,6 +16,8 @@ void setup() {
   }
 }
 
+//SAMO WYKONYWANIE POMIARÓW BEZ WYSYŁANIA NA TTN
+
 void loop() {
   float tempC = ss.getTemp();
   uint16_t capread = ss.touchRead(0);
