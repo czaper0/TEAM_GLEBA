@@ -128,7 +128,7 @@ void setup()
 {
     // Set times from set_times() function
     set_times();
-
+    digitalWrite(LED_BUILTIN, LOW);
     // Turn on switches
     pinMode(SWITCH_TEMP, OUTPUT);
     digitalWrite(SWITCH_TEMP, HIGH);
@@ -189,5 +189,7 @@ void loop()
     }
    // sensors_off();
     send_data(meas);
+    LowPower.deepSleep((uint32_t) TimeSettings.timeAfterMeasuresTime); 
     delay(1000);
+    
 }
